@@ -1,6 +1,4 @@
 <template>
-<nb-container :style="{ backgroundColor: '#fff' }">
-<nb-content>
       <nb-card>
         <nb-card-item>
           <nb-body>
@@ -8,8 +6,6 @@
           </nb-body>            
         </nb-card-item>
       </nb-card>
-    </nb-content>
-</nb-container> 
 </template>
 <script>
 export default {};

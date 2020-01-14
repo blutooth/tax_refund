@@ -1,7 +1,7 @@
 <template>
       <nb-tabs>
       <nb-tab :heading="getHeadingCompForTab1()">
-        <dummy />
+        <checkList />
       </nb-tab>
       <nb-tab :heading="getHeadingCompForTab2()">
         <dummy />
@@ -15,9 +15,7 @@
 <script>
 import dummy from "./dummy";
 import React from "react";
-import checkList from "./checklist";
-
-
+import checkList from "./checkList";
 import { TabHeading, Icon, Text } from "native-base";
 
 export default {
@@ -46,7 +44,7 @@ export default {
       );
     }
   },
-  components: {dummy, TabHeading,checkList},
+  components: {dummy, TabHeading, checkList},
 
 };
 </script>
