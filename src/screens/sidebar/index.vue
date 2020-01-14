@@ -83,6 +83,12 @@ export default {
       },
       datas: [
         {
+          name: "ChiHome",
+          route: "ChiHome",
+          icon: "phone-portrait",
+          bg: "#C5F442"
+        },
+        {
           name: "Anatomy",
           route: "Anatomy",
           icon: "phone-portrait",
