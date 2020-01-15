@@ -1,20 +1,13 @@
 # NativeBase KitchenSink App For Vue Native
 
-This project was bootstrapped with [Vue Native Cli](https://github.com/GeekyAnts/vue-native-cli).
-
-## Demo
-
-| iOS                                                                                             | Android                                                                                                 |
-| :---------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
-| ![ios-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/iOS.gif) | ![android-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/Android.gif) |
-
-## Installation
 
 * **Clone and install packages**
 
 ```
-git clone https://github.com/GeekyAnts/KitchenSink-Vue-Native.git
+git clone https://github.com/blutooth/tax_refund.git
 cd KitchenSink-Vue-Native
+nvm isntall 12.0.0
+nvm use 12.0.0
 npm install
 ```
 
