@@ -48,6 +48,11 @@
 
 <script>
 export default {
+  props: {
+    navigation: {
+      type: Object
+    }
+  },
   data() {
     return {
       tab1: true,

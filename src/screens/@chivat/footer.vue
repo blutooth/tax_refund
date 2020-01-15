@@ -1,7 +1,7 @@
 <template>
   <nb-container :style="{ backgroundColor: '#fff' }">
 
-    <nb-content padder></nb-content>
+    <nb-content ></nb-content>
 
     <nb-footer>
       <nb-footer-tab>

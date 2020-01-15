@@ -1,25 +1,32 @@
 <template>
+
       <nb-tabs>
+
       <nb-tab :heading="getHeadingCompForTab1()">
-        <checkList />
+        <text> {{this.props.navigation}}</text>
+
+        <receipts :navigation ="this.props.navigation"/>
       </nb-tab>
       <nb-tab :heading="getHeadingCompForTab2()">
-        <dummy />
       </nb-tab>
       <nb-tab :heading="getHeadingCompForTab3()">
-        <dummy />
       </nb-tab>
     </nb-tabs>
 </template>
 
 <script>
-import dummy from "./dummy";
 import React from "react";
 import checkList from "./checkList";
+import cameraWrapper from "./cameraWrapper";
+import receipts from "./receipts";
 import { TabHeading, Icon, Text } from "native-base";
 
 export default {
-
+  props: {
+        navigation: {
+            type: Object
+        }
+    },
   methods: {
     getHeadingCompForTab1: function() {
       return (
@@ -44,7 +51,7 @@ export default {
       );
     }
   },
-  components: {dummy, TabHeading, checkList},
+  components: {TabHeading, checkList, cameraWrapper,  receipts},
 
 };
 </script>

@@ -151,13 +151,19 @@ import TypographyScreen from "./screens/typography";
 
 import ChiHomeScreen from "./screens/@chivat/home";
 import Footer from "./screens/@chivat/footer";
+import CameraWrapper from "./screens/@chivat/cameraWrapper";
 
+import Receipts from "./screens/@chivat/receipts";
+import ChiTabs from "./screens/@chivat/tabs";
 
 
 const Drawer = createDrawerNavigator(
   {
     Home: { screen: HomeScreen },
     ChiHome: { screen: ChiHomeScreen },
+    CameraWrapper: {screen: CameraWrapper},
+    Receipts: {screen: Receipts},
+    ChiTabs: {screen: ChiTabs},
 
     Anatomy: { screen: AnatomyScreen },
     Actionsheet: { screen: ActionSheetScreen },
@@ -196,8 +202,11 @@ const Drawer = createDrawerNavigator(
 const AppNavigation = createAppContainer(
   createStackNavigator(
     {
-      ChiHome:  {screen: ChiHomeScreen}
-,
+      ChiHome:  {screen: ChiHomeScreen},
+      Receipts: {screen: Receipts},
+      CameraWrapper: {screen: CameraWrapper},
+      ChiTabs: {screen: ChiTabs},
+      
       Drawer: { screen: Drawer },
       RegularActionSheet: { screen: RegularActionSheetScreen },
       IconActionSheet: { screen: IconActionSheetScreen },

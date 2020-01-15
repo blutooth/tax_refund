@@ -89,6 +89,13 @@ export default {
           bg: "#C5F442"
         },
         {
+          name: "CameraWrapper",
+          route: "CameraWrapper",
+          icon: "phone-portrait",
+          bg: "#C5F442"
+
+        },
+        {
           name: "Anatomy",
           route: "Anatomy",
           icon: "phone-portrait",
