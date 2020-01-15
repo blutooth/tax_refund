@@ -1,7 +1,7 @@
 <template>
   <view class="container"  id =#wrapper>
-    <camera :type="this.type" class="cam"/>
-    <nb-button :onPress="onPress" class="cam_but" >
+    <camera ref="cameraFoo" :type="this.type" class="cam"/>
+    <nb-button :onPress="snap" class="cam_but" >
         <nb-text>Click Me!</nb-text>
       </nb-button>
   </view>
@@ -9,7 +9,8 @@
 
 <script>
 import * as Permissions from 'expo-permissions';
-import {Camera} from "expo-camera";
+import { Camera } from "expo-camera";
+import { keys } from "ramda";
 import store from "../../store";
 
 export default {
@@ -22,23 +23,29 @@ export default {
  mounted: async () => {
    try{
     let status = await Permissions.askAsync(Permissions.CAMERA);
-    this.hasCameraPermission = status.status == "granted" ? true : false;
+    hasCameraPermission = status.status == "granted" ? true : false;
+    console.log("Rai is a beast");
+    
   } 
   catch(err) {
         console.log(err);
   }
  },
- methods: { onPress: async () => {
-   try{
-    let photo = await Camera.takePictureAsync({ 
-      quality: 1,
-      skipProcessing: true,
-      onPictureSaved: this.onPictureSaved });
-   }
-   catch(err) {
-      console.log(err);
-   }
-   },
+ methods: { 
+
+    snap: async function () {
+      console.log("plz work")
+      const photo = await this.$refs.cameraFoo.takePictureAsync();
+      console.log(typeof photo)
+      console.log(photo["u"])
+
+      console.log(keys(photo))
+      store.commit("ADD_RECEIPT");
+
+      this.navigation.navigate('Receipts');
+
+},
+    
    onPictureSaved: async (photo) => {
       store.commit("ADD_RECEIPT");
       this.navigation.navigate('Receipts');
@@ -47,6 +54,11 @@ export default {
  
  },
  components: { Camera },
+ props: {
+   navigation: {
+      type: Object
+    }
+ }
 };
 </script>
 <style>

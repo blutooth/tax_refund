@@ -1,4 +1,4 @@
-export function SET_RECEIPT (state, photo) {
+export function ADD_RECEIPT (state, photo) {
     d = new Date().toLocaleString()
     receipts = state.receipts
     receipts.push({"date":d,"photo":photo})
