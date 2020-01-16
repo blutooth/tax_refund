@@ -150,9 +150,7 @@ import ToastTypeScreen from "./screens/toast/toastType";
 import TypographyScreen from "./screens/typography";
 
 import ChiHomeScreen from "./screens/@chivat/home";
-import Footer from "./screens/@chivat/footer";
-
-
+import CameraWrapper from "./screens/@chivat/components/receipts/cameraLauncher";
 
 const Drawer = createDrawerNavigator(
   {
@@ -196,8 +194,9 @@ const Drawer = createDrawerNavigator(
 const AppNavigation = createAppContainer(
   createStackNavigator(
     {
-      ChiHome:  {screen: ChiHomeScreen}
-,
+      CameraWrapper: { screen: CameraWrapper },
+      ChiHome: { screen: ChiHomeScreen },
+
       Drawer: { screen: Drawer },
       RegularActionSheet: { screen: RegularActionSheetScreen },
       IconActionSheet: { screen: IconActionSheetScreen },
@@ -311,6 +310,6 @@ const AppNavigation = createAppContainer(
   )
 );
 export default {
-  components: { Root, AppNavigation, Footer }
+  components: { Root, AppNavigation }
 };
 </script>
